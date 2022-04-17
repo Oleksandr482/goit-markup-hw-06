@@ -505,10 +505,17 @@ p {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--primary-bg-color);
+  outline: none;
 
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sub-input input:focus {
+  border-color: var(--accent-color);
 }
 
 .sub-input input::placeholder {
@@ -614,12 +621,21 @@ p {
   color: var(--title-text-colot);
 }
 
-.modal-form textarea {
+.modal-form .comment-area {
   resize: none;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   background-color: #fff;
+  color: var(--primary-text-color);
+  font-size: 16px;
+  outline: none;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment-area:focus {
+  border-color: var(--accent-color);
 }
 
 .user-name label,
@@ -633,14 +649,33 @@ p {
 .phone-number input,
 .user-email input {
   height: 40px;
+  padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  color: var(--primary-text-color);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-name input:focus,
+.phone-number input:focus,
+.user-email input:focus {
+  border-color: var(--accent-color);
+}
+
+.user-name:focus-within,
+.phone-number:focus-within,
+.user-email:focus-within {
+  fill: var(--accent-color);
 }
 
 .user-name,
 .phone-number,
 .user-email,
 .comment {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -648,6 +683,16 @@ p {
   font-size: 12px;
   line-height: 1.18;
   letter-spacing: 0.01em;
+
+  fill: #000000;
+  
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
 }
 
 .comment {
