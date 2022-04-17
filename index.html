@@ -360,6 +360,18 @@
         </li>
       </ul>
     </div>
+    <form class="subscription-form">
+      <h3 class="subscription-title">підпишіться на розсилку</h3>
+      <div class="sub-input">
+        <input type="email" name="subscription-mail" id="sub-mail" placeholder="E-mail">
+        <button type="submit">
+          Підписатися
+          <svg class="icon-send" width="24" height="24">
+            <use href="./images/icons.svg#icon-send"></use>
+          </svg>
+        </button>
+      </div>
+    </form>
 
   </div>
 </footer>
@@ -373,6 +385,34 @@
         </svg>
       </button>
     </div>
+
+    <form class="modal-form">
+      <b>Залиште ваші дані, ми вам зателефонуємо</b>
+      <div class="user-name">
+        <label for="name">Ім'я</label>
+        <input type="text" name="user-name" id="name">
+      </div>
+      <div class="phone-number">
+        <label for="tel">Телефон</label>
+        <input type="tel" name="phone-number" id="tel">
+      </div>
+      <div class="user-email">
+        <label for="mail">Пошта</label>
+        <input type="email" name="user-email" id="mail">
+      </div>
+      <div class="comment">
+        <label for="comment">Коментарій</label>
+        <textarea name="comment" id="comment" rows="10" placeholder="Введіть текст"></textarea>
+      </div>
+      <div class="license">
+        <input type="checkbox" name="license" id="license">
+        <label for="license">
+          Погоджуюсь на розсилку та приймаю <a href="">Умови договору</a>
+        </label>
+      </div>
+      <button type="submit">Відправити</button>
+    </form>
+
   </div>
 </div>
 

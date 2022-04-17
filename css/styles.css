@@ -261,7 +261,8 @@ p {
 }
 
 .title-specifics,
-.social-links-title {
+.social-links-title,
+.subscription-title {
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -452,7 +453,8 @@ p {
   margin-left: 70px;
 }
 
-.social-links-title {
+.social-links-title,
+.subscription-title {
   margin-top: 12px;
   margin-bottom: 20px;
 
@@ -487,6 +489,46 @@ p {
   background-color: var(--accent-color)
 }
 
+.subscription-form {
+  margin-left: 93px;
+}
+
+.sub-input {
+  display: flex;
+}
+
+.sub-input input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--primary-bg-color);
+
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sub-input input::placeholder {
+ 
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sub-input button {
+  width: 200px;
+  padding: 10px 0px;
+  margin-left: 12px;
+}
+
+.icon-send {
+  margin-left: 10px;
+}
+
+
 /* Модальне вікно */
 
 .backdrop {
@@ -509,7 +551,7 @@ p {
   transform: translate(-50%, -50%) scale(1);
 
   min-width: 528px;
-  height: 581px;
+  /* height: 581px; */
   background-color: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -546,7 +588,7 @@ p {
   background-color: #fff;
   cursor: pointer;
 
-  fill: #000000
+  fill: #000000;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -554,6 +596,121 @@ p {
 .close-modal:hover,
 .close-modal:focus {
   fill: var(--accent-color);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.modal-form b {
+  margin-bottom: 12px;
+  
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  
+  color: var(--title-text-colot);
+}
+
+.modal-form textarea {
+  resize: none;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.user-name label,
+.user-email label,
+.phone-number label,
+.comment label {
+  margin-bottom: 4px;
+}
+
+.user-name input,
+.phone-number input,
+.user-email input {
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.user-name,
+.phone-number,
+.user-email,
+.comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  font-size: 12px;
+  line-height: 1.18;
+  letter-spacing: 0.01em;
+}
+
+.comment {
+  margin-bottom: 20px;
+}
+
+.comment textarea::placeholder {
+  letter-spacing: 0.01em;
+  
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.license {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.license input [type="checkbox"] {
+  margin-right: 10px;
+}
+
+.license label {
+  margin-left: 8px;
+}
+
+.license a {
+  color: var(--accent-color);
+}
+
+.sub-input button,
+.modal-form button[type="submit"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form button[type="submit"] {
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.sub-input button:hover,
+.sub-input button:focus,
+.modal-form button[type="submit"]:hover,
+.modal-form button[type="submit"]:focus {
+  background: #188CE8;
 }
 
 /* Портфоліо */
